@@ -1,11 +1,3 @@
-from pathlib import Path
-
-data_path = Path() / "data"
-data_path.mkdir(parents=True, exist_ok=True)
-
-code_path = Path() / "codes"
-code_path.mkdir(parents=True, exist_ok=True)
-
 def shopping(shop_file):
     shop_dict = {} # 생성할 사전 객체
 
