@@ -1,13 +1,12 @@
 def shopping(shop_file):
     shop_dict = {} # 생성할 사전 객체
 
-    with open(data_path / shop_file, mode='r', encoding='utf-8') as f:    
+    with open("data/"+ shop_file) as f:
       for line in f:
-        price_of_goods = line.strip().split() 
-        if price_of_goods != []:      
-          goods, price = price_of_goods 
-        if price != shop_file[4]:
-          shop_dict[goods] = int(price.rstrip('원'))
+        if line != "\n":
+          name, price = line.strip().split()
+          if name != "#쇼핑몰":
+            shop_dict[name] = price
 
     return shop_dict
 
